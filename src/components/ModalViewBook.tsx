@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { BookType } from './List';
-import { ButtonBase, Grid, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import styled from '@emotion/styled';
 
 const style = {

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import { useCallback, useState } from 'react';
 import ListBooks, { BookType } from './components/List';
 import { Alert, Grid, IconButton, Snackbar, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
@@ -49,7 +49,7 @@ function App() {
     }else {
       handleOpenToast()
     }
-  },[booksData])
+  },[booksData, handleOpenToast])
 
 
 

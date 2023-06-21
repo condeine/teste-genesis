@@ -76,7 +76,7 @@ const closeViewBook = useCallback(() => {
                             Description 
                         </Typography>
                         <Typography variant="body2" gutterBottom>
-                            {book.description}
+                            {book.description.substring(0, 150)} ...
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
                             Author {book.author}

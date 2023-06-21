@@ -1,0 +1,25 @@
+{
+    "data": [
+        {
+          "id": "1",
+          "title": "Harry Potter and the Philosopher’s",
+          "img": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1170803558l/72193.jpg",
+          "author": "J.K. Rowling",
+          "description":"Harry Potter thinks he is an ordinary boy - until he is rescued by an owl, taken to Hogwarts School of Witchcraft and Wizardry, learns to play Quidditch and does battle in a deadly duel. The Reason ... HARRY POTTER IS A WIZARD!"
+        },
+        {
+          "id": "2",
+          "title": "Boneshaker",
+          "img":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1433161048i/1137215.jpg",
+          "author": "Cherie Priest",
+          "description":"In the early days of the Civil War, rumors of gold in the frozen Klondike brought hordes of newcomers to the Pacific Northwest. Anxious to compete, Russian prospectors commissioned inventor Leviticus Blue to create a great machine that could mine through Alaska’s ice. Thus was Dr. Blue’s Incredible Bone-Shaking Drill Engine born."
+        },
+        {
+          "id": "3",
+          "title": "The Broken Lands",
+          "img":"https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1333397090i/12329486.jpg",
+          "author": "Kate Milford",
+          "description":"So begins this deliciously spine-tingling prequel to Kate Milford’s The Boneshaker, set in the colorful world of nineteenth-century Coney Island and New York City. Few crossroads compare to the one being formed by the Brooklyn Bridge and the East River, and as the bridge’s construction progresses, forces of unimaginable evil seek to bend that power to their advantage. Only two orphans with unusual skills stand in their way."
+        }
+      ]
+}

@@ -82,10 +82,10 @@ function App() {
       <Grid container  sx={{maxWidth: 900}} spacing={2}  columns={12}>
         <Grid item xs={12} sx={{margin: "40px 0"}}>
           <Grid container>
-            <Grid item sx={{marginBottom:5}}  md={9}>
+            <Grid item sx={{marginBottom:5}}  xs={8}>
               <Typography variant='h4'>List Books</Typography>
             </Grid>
-            <Grid item md={3}>
+            <Grid item xs={4}>
               <Button fullWidth variant="contained" onClick={handleOpenAddModalBook}>
                 Add Book
               </Button>

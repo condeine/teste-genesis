@@ -53,6 +53,8 @@ const closeViewBook = useCallback(() => {
                 books.map(book => { 
                     return(
             <ListItem 
+                sx={{marginBottom: 5}}
+                
                 key={uid()}
                 secondaryAction={
                     <IconButton onClick={() => onDelete(book)} edge="end">
@@ -61,28 +63,28 @@ const closeViewBook = useCallback(() => {
                 }
                 >
                 <Grid container spacing={4}>
-                    <Grid item>
-                    <ButtonBase sx={{ width: 128, height: 200 }} onClick={() => setViewBook(book)}>
-                        <Img alt="cover-book" src={book.img} />
-                    </ButtonBase>
+                    <Grid item xs={3}>
+                        <ButtonBase onClick={() => setViewBook(book)}>
+                            <Img alt="cover-book" src={book.img} />
+                        </ButtonBase>
                     </Grid>
-                    <Grid item xs={12} sm container>
-                    <Grid item xs container direction="column" spacing={2}>
-                        <Grid item xs>
-                        <Typography gutterBottom variant="subtitle1" component="div">
-                            {book.title}
-                        </Typography>
-                        <Typography variant="body2">
-                            Description 
-                        </Typography>
-                        <Typography variant="body2" gutterBottom>
-                            {book.description.substring(0, 150)} ...
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            Author {book.author}
-                        </Typography>
+                    <Grid item xs={7} sm container>
+                        <Grid item xs container direction="column" spacing={2}>
+                            <Grid item xs>
+                                <Typography gutterBottom variant="subtitle1" component="div">
+                                    {book.title}
+                                </Typography>
+                                <Typography variant="body2">
+                                    Description 
+                                </Typography>
+                                <Typography variant="body2" gutterBottom>
+                                    {book.description.substring(0, 150)} ...
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Author {book.author}
+                                </Typography>
+                            </Grid>
                         </Grid>
-                    </Grid>
                     </Grid>
                 </Grid>
             </ListItem>

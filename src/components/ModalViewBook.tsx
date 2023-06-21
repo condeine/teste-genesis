@@ -9,18 +9,19 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: 900,
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
     p: 4,
+    width: 320,
   };
 
   const Img = styled('img')({
     margin: 'auto',
     display: 'block',
     maxWidth: '100%',
-    maxHeight: '100%',
+    maxHeight: '250px',
+
   });
 
 interface ModalViewBookProps {
@@ -35,26 +36,27 @@ export default function ModalViewBook({open ,book = null ,onClose}: ModalViewBoo
   return (
     <div>
       <Modal
+        disableScrollLock
         open={open}
         onClose={onClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-            <Grid container spacing={4}>
-              <Grid item>
+            <Grid container justifyContent="center" spacing={4}>
+              <Grid xs={4} sm={12} item>
                 <Img alt={book?.title} src={book?.img} />
               </Grid>
-              <Grid item xs={12} sm container>
+              <Grid item xs={8} sm={12} container>
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
-                  <Typography gutterBottom variant="h3">
+                  <Typography sx={{typography: {xs:"h5", sm:"h3"}}}>
                     {book?.title}
                   </Typography>
                   <Typography variant="h6">
                     Description 
                   </Typography>
-                  <Typography variant="subtitle1" gutterBottom>
+                  <Typography variant="subtitle1">
                     {book?.description}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">

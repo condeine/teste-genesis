@@ -3,8 +3,10 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { ButtonBase, Grid, Typography } from '@mui/material';
+import { ButtonBase, Grid, Modal, Typography } from '@mui/material';
 import { uid } from 'uid';
+import { useCallback, useState } from 'react';
+import ModalViewBook from './ModalViewBook';
 
 const Box = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.paper,
@@ -32,13 +34,26 @@ interface ListBooksProps {
 }
 
 export default function ListBooks({books, onDelete}: ListBooksProps) {
+const [viewBook, setViewBook] = useState<BookType | null>(null)
+
+const closeViewBook = useCallback(() => {
+    setViewBook(null)
+  },[])
+
+
   return (
     <Box>
+        <ModalViewBook
+            open={!!viewBook} 
+            book={viewBook}
+            onClose={closeViewBook}
+        />
         <List>
             {
                 books.map(book => { 
                     return(
-            <ListItem key={uid()}
+            <ListItem 
+                key={uid()}
                 secondaryAction={
                     <IconButton onClick={() => onDelete(book)} edge="end">
                        <DeleteIcon />
@@ -47,8 +62,8 @@ export default function ListBooks({books, onDelete}: ListBooksProps) {
                 >
                 <Grid container spacing={4}>
                     <Grid item>
-                    <ButtonBase sx={{ width: 128, height: 200 }}>
-                        <Img alt="complex" src={book.img} />
+                    <ButtonBase sx={{ width: 128, height: 200 }} onClick={() => setViewBook(book)}>
+                        <Img alt="cover-book" src={book.img} />
                     </ButtonBase>
                     </Grid>
                     <Grid item xs={12} sm container>

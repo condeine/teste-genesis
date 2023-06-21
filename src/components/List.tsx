@@ -3,7 +3,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import IconButton from '@mui/material/IconButton';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { ButtonBase, Grid, Modal, Typography } from '@mui/material';
+import { ButtonBase, Grid, Typography } from '@mui/material';
 import { uid } from 'uid';
 import { useCallback, useState } from 'react';
 import ModalViewBook from './ModalViewBook';
